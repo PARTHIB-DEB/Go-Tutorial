@@ -1,5 +1,31 @@
 package main
 
+/*
+	There are 2 ways to create variables -
+	1. using 'var' keyword
+	2. using ':=' (walrus) operator
+
+	':='  is for both declaration, assignment, and also for redeclaration;
+	It guesses (infers) the variable's type automatically.
+
+	------------------------COMPARISON-------------------------------
+
+	'v:=32'						|				var v int
+								|				v = 32
+								|		OR
+								|				var v int = 32
+								|		OR
+								|				var v = 32
+
+	-------------------------------------------------------------------
+
+	Can't declare same variable by := in same SCOPE.
+	Can't use := Outside of package-name function (Scopes will be discussed later)
+
+	More about := operator , click the link below -
+	(Ans-365) => (https://stackoverflow.com/questions/17891226/difference-between-and-operators-in-go)
+*/
+
 import "fmt"
 
 var (
