@@ -83,6 +83,12 @@ func main() {
 	// Comparison , Comparing and Typecasting in structs are not allowed,
 	// However , we can Compare a 'Named' Struct to an 'Anonymous' Struct , IFF their fields are exactly SAME (Order , Number , Types)
 
+	/*
+		Why will you use Anonymous Structs -
+			1. The first is when you translate external data into a struct or a struct into external data (like JSON
+		or protocol buffers). This is called unmarshaling and marshaling data
+			2. Writing tests is another place where anonymous structs pop up
+	*/
 	type firstPerson struct {
 		name string
 		age  int
