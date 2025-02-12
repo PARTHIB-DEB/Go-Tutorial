@@ -37,4 +37,10 @@ func main() {
 	fmt.Printf("X in main(functional) block - %s\n", x)
 	x, y := 10, 20
 	fmt.Printf("Updated X and Y in main(functional) block - %d %d\n", x, y)
+	// Shadowing Package names
+	/*
+	 fmt.Println(x)
+	 fmt := "oops"
+	 fmt.Println(fmt) // will throw a Panic
+	*/
 }
