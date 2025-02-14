@@ -14,6 +14,11 @@ There are 4 kinds of For-Loop in Go -
 3. Infinite For Loop  (Naked Loop)
 4. For-Range Loop (Most Useful , Helpful over SLICES , ARRAYS , MAPS etc)
 
+You should be aware that each time the for-range loop iterates over your compound type, it copies the
+value from the compound type to the value variable. Modifying the value variable will not modify the
+value in the compound type .
+
+
 */
 
 func main() {
