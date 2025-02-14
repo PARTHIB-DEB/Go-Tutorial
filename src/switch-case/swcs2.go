@@ -23,4 +23,21 @@ func main() {
 			fmt.Println(word, "is a long word!")
 		}
 	}
+
+	// In Go , 'break' in switch-cases is not necessary , based on result only one case got fired
+
+	var n int
+	fmt.Print("Enter number: ")
+	fmt.Scanf("%d", &n)
+	switch k := n % 2; {
+	case k == 0:
+		fmt.Printf("%d is even\n", n)
+		// break
+	case k > 0:
+		fmt.Printf("%d is odd\n", n)
+		//break
+	default:
+		fmt.Printf("HOHO")
+	}
+
 }
