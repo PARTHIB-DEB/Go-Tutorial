@@ -1,5 +1,7 @@
 # GO TUTORIAL
 
+_**If you want to contribute in this repository , Go to the contribute branch**_
+
 Go is a multi-purpose and general programming language , developed by Google in 2007. ![App Screenshot](https://cdn1.iconfinder.com/data/icons/google-s-logo/150/Google_Icons-09-20.png)
 
 Nowadays , it is majorly used to build robust **backends** 💿 of different applications which needs features like **concurrency** for its scalability (to provide services to huge traffic). Go was built to act as a modern replacement of C by Google but it got its own place 🥈 (yet we know , why C is the king of all languages) 👑.
@@ -77,5 +79,4 @@ Open **/src** of your go workspace . open terminal . run the following commands 
 ### IDE
 For me , Jetbrain's GOLAND is best environment where you can code in GO.
 
-### Contribute 🖋️
-If you want to contribute in this repository , Go to the **contribute** branch
+
