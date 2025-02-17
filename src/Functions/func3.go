@@ -11,6 +11,8 @@ A subcase of Multiple Return Values - Named Return Values
 Just like named parameter's implementation , you can now mention exactly what things are expected to get as return value/s
 from the function
 
+In this case - either specify all returns or don't specify anyone
+
 Also there are functions which is expected to return anything
 
 */
