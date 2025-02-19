@@ -19,7 +19,7 @@ Often Anonymous Functions (Look inside Function/func05.go) as the inner function
 func generatesum(i int, j int) {
 	for k := i; k <= j; k++ {
 		var summ int = 1
-		func(num int) {
+		func(num int) { // Inner Function (Anonymous Function)
 			summ = summ + num
 			fmt.Printf("1 + %d = %d\n", num, summ)
 		}(k)
