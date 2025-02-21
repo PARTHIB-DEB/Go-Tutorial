@@ -58,10 +58,7 @@ To find the GOROOT location , run this command -
   export GOROOT=/path/to/golang
   export PATH=$PATH:$GOROOT/bin
   
-  export GOPATH=/folder1/folder2/Desktop/GO-CODING/golib
-  export PATH=$PATH:$GOROOT/bin
-  
-  export GOPATH=$GOPATH:/foldr1/pkdeb/folder2/GO-CODING/programs/
+  export GOPATH=$GOPATH:/path/to/go-folder/programs
 
 ```
 
