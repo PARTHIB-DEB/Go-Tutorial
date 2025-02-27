@@ -27,6 +27,8 @@ func main() {
 	fmt.Println("Value of x:", x, "Address of x:", pointerX)
 	fmt.Println("Value of y:", y, "Address of y:", pointerY)
 
+	// This is called dereferencing
+	// Its done with * operator
 	x = 10
 	pointerToX := &x
 	fmt.Println(pointerToX) // or  fmt.Println(*pointerToX)
