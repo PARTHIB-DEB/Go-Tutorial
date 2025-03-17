@@ -1,8 +1,20 @@
 package main
 
 import (
+	"errors"
 	"fmt"
 )
+
+// LinkedList defines common operations for list implementations
+type LinkedList interface {
+	InsertAtBeginning(value int) error
+	InsertAtEnd(value int) error
+	Delete(value int) error
+	Search(value int) bool
+	PrintList()
+	IsEmpty() bool
+	Size() int
+}
 
 type Node struct {
 	value int
@@ -13,10 +25,21 @@ type Node struct {
 type DoublyLinkedList struct {
 	head *Node
 	tail *Node
+	size int
 }
 
-// Insert a new node at the beginning of the list
-func (dll *DoublyLinkedList) InsertAtBeginning(value int) {
+// IsEmpty checks if the list is empty
+func (dll *DoublyLinkedList) IsEmpty() bool {
+	return dll.head == nil
+}
+
+// Size returns the number of nodes in the list
+func (dll *DoublyLinkedList) Size() int {
+	return dll.size
+}
+
+// InsertAtBeginning inserts a new node at the beginning of the list
+func (dll *DoublyLinkedList) InsertAtBeginning(value int) error {
 	newNode := &Node{value: value, next: dll.head}
 	if dll.head != nil {
 		dll.head.prev = newNode
@@ -24,10 +47,12 @@ func (dll *DoublyLinkedList) InsertAtBeginning(value int) {
 		dll.tail = newNode // If the list was empty, update the tail
 	}
 	dll.head = newNode
+	dll.size++
+	return nil
 }
 
-// Insert a new node at the end of the list
-func (dll *DoublyLinkedList) InsertAtEnd(value int) {
+// InsertAtEnd inserts a new node at the end of the list
+func (dll *DoublyLinkedList) InsertAtEnd(value int) error {
 	newNode := &Node{value: value, prev: dll.tail}
 	if dll.tail != nil {
 		dll.tail.next = newNode
@@ -35,27 +60,39 @@ func (dll *DoublyLinkedList) InsertAtEnd(value int) {
 		dll.head = newNode // If the list was empty, update the head
 	}
 	dll.tail = newNode
+	dll.size++
+	return nil
 }
 
-// Delete a node by value
-func (dll *DoublyLinkedList) Delete(value int) {
+// Delete removes a node by value and returns an error if not found
+func (dll *DoublyLinkedList) Delete(value int) error {
+	if dll.IsEmpty() {
+		return errors.New("cannot delete from empty list")
+	}
+
 	current := dll.head
 	for current != nil && current.value != value {
 		current = current.next
 	}
+
 	if current == nil {
-		return // Value not found
+		return errors.New("value not found in the list")
 	}
+
 	if current.prev != nil {
 		current.prev.next = current.next
 	} else {
 		dll.head = current.next // Update head if deleting first node
 	}
+
 	if current.next != nil {
 		current.next.prev = current.prev
 	} else {
 		dll.tail = current.prev // Update tail if deleting last node
 	}
+	
+	dll.size--
+	return nil
 }
 
 // Search for a value in the list
@@ -70,8 +107,13 @@ func (dll *DoublyLinkedList) Search(value int) bool {
 	return false
 }
 
-// Print the entire list from head to tail
+// PrintList prints the entire list from head to tail
 func (dll *DoublyLinkedList) PrintList() {
+	if dll.IsEmpty() {
+		fmt.Println("List is empty")
+		return
+	}
+	
 	current := dll.head
 	for current != nil {
 		fmt.Printf("%d <-> ", current.value)
@@ -81,26 +123,30 @@ func (dll *DoublyLinkedList) PrintList() {
 }
 
 func main() {
-	dll := &DoublyLinkedList{}
+	// Use the interface type for polymorphism
+	var list LinkedList = &DoublyLinkedList{}
 
 	// Test cases
-	dll.InsertAtBeginning(10)
-	dll.InsertAtBeginning(5)
-	dll.InsertAtEnd(20)
-	dll.InsertAtEnd(25)
+	list.InsertAtBeginning(10)
+	list.InsertAtBeginning(5)
+	list.InsertAtEnd(20)
+	list.InsertAtEnd(25)
 	fmt.Println("Doubly Linked List after insertions:")
-	dll.PrintList()
+	list.PrintList()
 
-	dll.Delete(10)
-	fmt.Println("Doubly Linked List after deleting 10:")
-	dll.PrintList()
+	if err := list.Delete(10); err == nil {
+		fmt.Println("Doubly Linked List after deleting 10:")
+		list.PrintList()
+	} else {
+		fmt.Println("Error:", err)
+	}
 
-	fmt.Println("Searching for 20:", dll.Search(20))
-	fmt.Println("Searching for 100:", dll.Search(100))
+	// Test error handling
+	if err := list.Delete(100); err != nil {
+		fmt.Println("Error:", err)
+	}
 
-	// Exercises
-	// 1. Implement a function to reverse the doubly linked list.
-	// 2. Implement a function to find the middle element of the list.
-	// 3. Implement a function to remove duplicates from the list.
-	// 4. Try inserting and deleting elements, then print the list to observe changes.
+	fmt.Println("Searching for 20:", list.Search(20))
+	fmt.Println("Searching for 100:", list.Search(100))
+	fmt.Println("List size:", list.Size())
 }
