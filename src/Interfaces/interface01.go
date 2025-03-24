@@ -17,9 +17,11 @@ Till now we would just implement those methods by giving them different descript
 But how we will access those methods , because they are stacked in a interface , so somehow we have to access the interface ,
 each time by an object of a struct.
 
-We have to make a seperate function which will take an object of the interface (which will be actually an object of struct) and use its functions
+Now either we can call each of those methods from the objects of each struct Or we can do this
 
-Although this seperate function is not necessary untill we want all those functions to run at once (not by individual call)
+We have to make a seperate function which will take an object of the interface (which will be actually an object of struct) and use its functions
+It will be a stack of methods call using that function
+
 */
 
 type details interface {
