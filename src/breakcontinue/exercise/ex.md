@@ -1,7 +1,6 @@
 # Mastering `break` and `continue` in Go
 
-In Go, `break` is used to **exit** a loop immediately, while `continue` is used to **skip** the current iteration  
-and proceed to the next one. Understanding their behavior is essential for controlling loop execution.
+In Go, `break` is used to **exit** a loop immediately, while `continue` is used to **skip** the current iteration and proceed to the next one. Understanding their behavior is essential for controlling loop execution.
 
 ## Questions
 
