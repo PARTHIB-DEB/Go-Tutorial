@@ -1,8 +1,11 @@
 # Binary Executables for Go 1.21
 
-- `main`: Main application binary
-- `mylib.a`: Compiled package file
+The `bin/` folder contains compiled executables generated from Go source files.
 
-## Build Details
-- Built using Go 1.21
-- Run `./bin/main` to execute
+## Contents:
+- `main`: The main application binary.
+
+## How to Use:
+1. Run the binary using:
+   ```sh
+   ./bin/main
