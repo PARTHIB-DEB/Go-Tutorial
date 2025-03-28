@@ -26,6 +26,8 @@ func main() {
 	fmt.Printf("After changeNums , a : %d , b : %d\n", a, b)
 
 	fmt.Printf("Original Address of a : %x\n", &a)
+	var ad *int = &a
 	changeNumsbyPtr(&a, b)
+	fmt.Printf("Original Address of the pointer variable '&a' : %x\n", &ad)
 	fmt.Printf("After changeNumsbyPtr , a : %d , b : %d\n", a, b)
 }
