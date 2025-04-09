@@ -11,6 +11,7 @@ You can run **go** in any OS (Windows , Linux , Mac) 💻. Here , I will describ
 ## Installation in linux (boot or WSL)
 
 - The previous installation procedure was only suitable for those , **who has not installed golang or written any go program in their system** 👶
+- Were they **official installtion steps** ? No , you want to see that ? Then click the link above . But remember , they didn't declare precisely about the installation 🚗
 - But it **lacks modularity** between different Go versions . ⏬
 - The steps were just INEFFICIENT , **NOT WRONG** ◀️
 - So in this week , I am going to publish a **blog post** where I will discuss the steps for **Hasselfree version management of Golang in Linux** ⭐
