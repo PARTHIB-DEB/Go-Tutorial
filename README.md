@@ -12,7 +12,7 @@ You can run **go** in any OS (Windows , Linux , Mac) 💻. Here , I will describ
 
 - The previous installation procedure was only suitable for those , **who has not installed golang or written any go program in their system** 👶
 - Were they **official installtion steps** ? No , you want to see that ? Then click the link above . But remember , they didn't declare the installation steps precisely as I had done  🚗
-- So it creates **less modularity** and **conflicts** when you will try to install multiple Go versions ⏬
+- So it creates **less modularity** and **more conflicts** when you will try to install multiple Go versions ⏬
 - The steps were just INEFFICIENT , **NOT WRONG** ◀️
 - So in this week , I am going to publish a **blog post** where I will discuss the steps for **Hasselfree version management of Golang in Linux** ⭐
 - I will definitely attach its link in this readme 😄
