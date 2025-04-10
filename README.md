@@ -10,4 +10,4 @@ You can run **go** in any OS (Windows , Linux , Mac) 💻. Here , I will describ
 
 ## Installation in linux (boot or WSL)
 
-Read the blog ➡️ : [linj](https://dev.to/parthib_deb23/hasslefree-version-management-of-golang-584j)
+Read the blog ➡️ : [link](https://dev.to/parthib_deb23/hasslefree-version-management-of-golang-584j)
