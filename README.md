@@ -18,9 +18,7 @@ Nowadays, Go is primarily used to build robust backends for applications requiri
 Go is cross-platform. Choose your operating system below to get started.
 
 ### Linux (Native or WSL)
-For a streamlined experience, it is recommended to use a version manager or the official tarball.
-- **Manual Install:** Follow the official Linux binaries guide  
-- **Version Management:** Check out a hassle-free [Go management guide](https://dev.to/parthib_deb23/hasslefree-version-management-of-golang-584j) 
+- **Installation & Version Management:** Check out a hassle-free [Go installation and management guide](https://dev.to/parthib_deb23/hasslefree-version-management-of-golang-584j) 
 
 ### Windows
 - **MSI Installer:**  
