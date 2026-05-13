@@ -6,7 +6,7 @@ import "fmt"
 
 In Go , Arrays are rigid (Immutable) and homogenous
 
-Each Mutable sequence has their ZERO / DEFAULT value.
+Each sequence has their ZERO / DEFAULT value.
 For Arrays -> var arr [X] = [0,0,0,0.....upto X times]
 
 Reasons behind Array is not so much in GO -
