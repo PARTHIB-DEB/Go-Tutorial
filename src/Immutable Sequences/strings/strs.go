@@ -11,7 +11,7 @@ The rune type is an alias for the int32 type, just like byte is an alias for uin
 
 
 string is composed of a sequence of UTF-8-encoded code points.
-Just like you can extract a single value from an array or a slice, you can extract a sin‐ gle value from a
+Just like you can extract a single value from an array or a slice, you can extract a single value from a
 string by using an index expression :
 
 runes are closest datatype to string
