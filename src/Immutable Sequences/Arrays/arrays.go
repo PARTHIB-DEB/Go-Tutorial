@@ -10,7 +10,7 @@ Each sequence has their ZERO / DEFAULT value.
 For Arrays -> var arr [X] = [0,0,0,0.....upto X times]
 
 Reasons behind Array is not so much in GO -
-1. Go considers the size of array to be a part of array . That's why '[3]int arr{}' is different from
+1. Go considers the size of array to be a part of type of array . That's why '[3]int arr{}' is different from
 	'[100]int arr1{}'
 2. This also means that you can't use a variable to specify the size of array , because types
 	must be resolved at Compile Time , not at Runtime
